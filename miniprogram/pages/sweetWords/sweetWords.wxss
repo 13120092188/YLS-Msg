@@ -1,0 +1,66 @@
+/* miniprogram/pages/sweetWords/sweetWords.wxss */
+.sendmessage {
+  position:fixed; bottom:0;
+  display: flex;
+  flex-direction:row;
+  border:1px solid #aaaaaa;
+  border-radius: 5px;
+  width: 100%;
+  background-color : rgba(197, 189, 189, 0.9) ;
+  
+}
+
+.sendmessage input { 
+  width:80%;
+  height:40px;
+  line-height : 40px ;
+  font-size : 14px ;
+  padding-left:10px;
+  border-radius: 5px;
+}
+.sendmessage button {
+ border : 1px solid #8edabf85 ;
+ width : 20% ;
+ height : 40px ;
+ background-size: 100% 110%;
+ background-color : rgba(102, 88, 88, 0.5) ;
+ line-height : 40px ;
+ font-size : 14px ;
+}
+.historycon {
+  height: 90%;flex-direction:column;display:flex;
+ border : 1px solid #aaaaaa ;
+ border-top:0px;
+}
+.history{
+  height: 100%;
+  margin-top:15px;
+ margin:10px;
+ font-size:14px;
+ line-height:40px;
+ word-break:break-all;
+}
+
+.block-Y{
+  margin:40rpx;
+  padding:10rpx;
+  border-radius: 5px;
+  background-color: rgba(149, 213, 250, 0.5)
+}
+.block-S{
+  margin:40rpx;
+  padding:10rpx;
+  border-radius: 5px;
+  background-color: rgba(241, 190, 233, 0.5)
+}
+
+.text-time{
+  margin-left:10rpx;
+  font-size: 10px;
+  color: rgb(95, 95, 95);
+}
+.text-words{
+  margin-left:60rpx;
+  margin-bottom:20rpx; 
+  font-size: 16px;
+}

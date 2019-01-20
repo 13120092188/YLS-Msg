@@ -1,0 +1,30 @@
+<!--miniprogram/pages/sweetWords/sweetWords.wxml-->
+<image class='background'></image>
+<view>
+  <view>
+    <text>.</text>
+    <block wx:for="{{sweetWordss}}" wx:for-item="sweetWords" wx:key="number">
+      <view class='block-Y' wx:if="{{sweetWords._openid=='oz3oN5HrG7HyxDrD2sDFVZXUHXZY'}}">
+        <text class='text-time'>{{sweetWords.timeString}}
+        </text>
+        <text class='text-words'>{{sweetWords.words}}</text>
+      </view>
+
+      <view class='block-S' wx:if="{{sweetWords._openid=='oz3oN5Mitki-JSWCibVe-tB8fzGY'}}">
+        <text class='text-time'>{{sweetWords.timeString}}
+        </text>
+        <text class='text-words'>{{sweetWords.words}}</text>
+      </view>
+    </block>
+    <view class="page__ft">
+        <image src="https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/Icon/icon_footer.png?sign=bbbe5ef87b1727c36c86e7dedffeb384&t=1547717215" style="width: 84px; height: 19px;"></image>
+    </view>
+  </view>
+  
+  <view>
+    <view class="sendmessage">
+        <input id="message" placeholder="说你爱我.." bindinput="getSweetWords" value='{{sendWords}}'></input>
+        <button bindtap="sendSweetWords">发送</button>
+    </view>
+  </view>
+</view> 

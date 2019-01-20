@@ -1,0 +1,24 @@
+<!--miniprogram/pages/photoAlbum/photoAlbum.wxml-->
+<image class='background'></image>
+
+<view>
+    <text>.</text>
+    <block wx:for="{{imagePaths}}" wx:for-item="imagePath" wx:key="number">
+      <view class='block-Y' wx:if="{{imagePath._openid=='oz3oN5HrG7HyxDrD2sDFVZXUHXZY'}}">
+        <image src='{{imagePath.fileID}}' mode="widthFix" style='width:95%'></image>
+        <text class='text-time'>{{imagePath.timeString}}</text>
+      </view>
+
+      <view class='block-S' wx:if="{{imagePath._openid=='oz3oN5Mitki-JSWCibVe-tB8fzGY'}}">
+        <image src='{{imagePath.fileID}}' mode="widthFix" style='width:95%'></image>
+        <text class='text-time'>{{imagePath.timeString}}</text>
+      </view>
+    </block>
+    <view class="page__ft">
+        <image src="https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/Icon/icon_footer.png?sign=bbbe5ef87b1727c36c86e7dedffeb384&t=1547717215" style="width: 84px; height: 19px;"></image>
+    </view>
+  </view>
+
+<view class="doUploadImg">
+  <button bindtap="doUploadImg">发送</button>
+</view>

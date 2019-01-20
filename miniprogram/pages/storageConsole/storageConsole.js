@@ -24,6 +24,7 @@ Page({
       imagePath,
     })
 
+    console.log(imagePath)
     console.group('文件存储文档')
     console.log('https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/storage.html')
     console.groupEnd()

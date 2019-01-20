@@ -1,0 +1,43 @@
+/* miniprogram/pages/photoAlbum/photoAlbum.wxss */
+
+.doUploadImg {
+  position:fixed; bottom:0;
+  display: flex;
+  flex-direction:row;
+  border:1px solid #aaaaaa;
+  border-radius: 5px;
+  width: 100%;
+  background-color : rgba(197, 189, 189, 0.9) ;
+  
+}
+
+.doUploadImg button {
+ border : 1px solid #8edabf85 ;
+ width : 50% ;
+ height : 40px ;
+ background-size: 100% 110%;
+ background-color : rgba(102, 88, 88, 0.5) ;
+ line-height : 40px ;
+ font-size : 14px ;
+}
+
+.block-Y{
+  text-align: center;
+  margin:40rpx;
+  padding:20rpx;
+  border-radius: 5px;
+  background-color: rgba(149, 213, 250, 0.5)
+}
+.block-S{
+  text-align: center;
+  margin:40rpx;
+  padding:10rpx;
+  border-radius: 5px;
+  background-color: rgba(241, 190, 233, 0.5)
+}
+
+.text-time{
+  margin-left:10rpx;
+  font-size: 10px;
+  color: rgb(95, 95, 95);
+}

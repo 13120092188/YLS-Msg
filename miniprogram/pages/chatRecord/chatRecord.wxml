@@ -1,0 +1,35 @@
+<!--miniprogram/pages/myTest/myTest.wxml-->
+
+<image class='background'></image>
+<view>
+  <view class="container log-list">
+    <block wx:for="{{messages}}" wx:for-item="message" wx:key="number">
+      <view class="block-Y" wx:if="{{message.name == '杨迅'}}">
+        <button 
+          bindgetuserinfo="onGetUserInfo"
+          class="user-head-Y"
+          style="background-image: url('https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/head-Y.jpg?sign=80c514c3c56273db8fead838884da317&t=1547706116')"
+        ></button>
+        <view class='view-msg-Y'>
+          <text class="log-item-name">{{message.name}}. {{message.time}}</text>
+          <text class="log-item-msg-Y">{{message.message}}</text>
+        </view>
+        <view style='width: 50rpx'></view>
+      </view>
+
+      <view class="block-S" wx:if="{{message.name == '梦寒'}}">
+        <view style='width: 50rpx'></view>
+        <view class='view-msg-S'>
+          <text class="log-item-name">{{message.time}}. {{message.name}}</text>
+          <text class="log-item-msg-S" wx:if="{{message.message.length <= 27}}">{{message.message}}</text>
+          <text class="log-item-msg-SL" wx:if="{{message.message.length > 27}}">{{message.message}}</text>
+        </view>
+        <button 
+          bindgetuserinfo="onGetUserInfo"
+          class="user-head-S"
+          style="background-image: url('https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/head-S.jpg?sign=190bfd09db643da2ec4f8b6585933d9b&t=1547706143')"
+        ></button>
+      </view>
+    </block>
+  </view>
+</view>

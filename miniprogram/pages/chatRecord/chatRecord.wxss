@@ -1,0 +1,95 @@
+/* miniprogram/pages/myTest/myTest.wxss */
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+}
+.log-item-name {
+  font-size: 10px;
+  color: gray;
+  margin: 10rpx;
+}
+.log-item-msg-Y {
+  font-size: 15px;
+  color: gray;
+  margin: 10rpx;
+}
+.log-item-msg-S {
+  font-size: 15px;
+  color: gray;
+  margin: 10rpx;
+}
+.log-item-msg-SL {
+  font-size: 15px;
+  color: gray;
+  margin: 10rpx;
+  text-align: left;
+}
+
+.block-Y{
+  margin-top: 10rpx;
+  height:fit-content;
+  width: 100%;
+  /* background: #fff; */
+  /* border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none; */
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  transition: all 300ms ease;
+}
+
+.block-S{
+  margin-top: 10rpx;
+  height:fit-content;
+  width: 100%;
+  /* background: #fff; */
+  /* border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none; */
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+  transition: all 300ms ease;
+}
+
+.user-head-Y {
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 10rpx;
+  border-radius: 10%;
+  background-size: cover;
+  /* background-color: white; */
+}
+.user-head-S {
+  width: 90rpx;
+  height: 90rpx;
+  margin-top: 10rpx;
+  border-radius: 10%;
+  background-size: cover;
+  /* background-color: white; */
+}
+
+.view-msg-Y {
+  text-align: left;
+  width: 650rpx;
+  margin-top: 0rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.view-msg-S {
+  text-align: right;
+  width: 650rpx;
+  margin-top: 0rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  color: #007aff;
+  background-color: white;
+  background-size: cover;
+}
