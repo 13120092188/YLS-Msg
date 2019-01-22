@@ -1,0 +1,54 @@
+<!--miniprogram/pages/doSearch/doSearch.wxml-->
+<image class='background'></image>
+
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-search-bar" style='background-color: rgba(253, 253, 253, 0.3)'>
+            <view class="weui-search-bar__form" style='background-color: rgba(253, 253, 253, 0.3)'>
+                <view class="weui-search-bar__box" style='background-color: rgba(253, 253, 253, 0.3)'>
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}" style='background-color: rgba(253, 253, 253, 0)'>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active" style='background-color: rgba(253, 253, 253, 0.5)'>
+                <view class="weui-cell__bd" style='background-color: rgba(253, 253, 253, 0)'>
+                    <view style='background-color: rgba(253, 253, 253, 0)'>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active" style='background-color: rgba(253, 253, 253, 0.5)'>
+                <view class="weui-cell__bd" style='background-color: rgba(253, 253, 253, 0)'>
+                    <view style='background-color: rgba(253, 253, 253, 0)'>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active" style='background-color: rgba(253, 253, 253, 0.5)'>
+                <view class="weui-cell__bd" style='background-color: rgba(253, 253, 253, 0)'>
+                    <view style='background-color: rgba(253, 253, 253, 0)'>实时搜索文本</view>
+                </view>
+            </navigator>
+            <navigator url="" class="weui-cell" hover-class="weui-cell_active" style='background-color: rgba(253, 253, 253, 0.5)'>
+                <view class="weui-cell__bd" style='background-color: rgba(253, 253, 253, 0)'>
+                    <view style='background-color: rgba(253, 253, 253, 0)'>实时搜索文本</view>
+                </view>
+            </navigator>
+            
+        </view>
+
+        <view class="page__bd" style='background-color: rgba(253, 253, 253, 0)'>
+        <view class="weui-btn-area" style='background-color: rgba(253, 253, 253, 0)'>
+            <picker class="weui-btn" mode="date" value="{{date}}" start="2018-08-10" end="2068-08-10" bindchange="bindDateChange" style='background-color: rgba(253, 253, 253, 0)'>
+                <button type="default" style='background-color: rgba(253, 253, 253, 0.5)'>日期选择器</button>
+            </picker>
+        </view>
+    </view>
+    </view>
+</view>

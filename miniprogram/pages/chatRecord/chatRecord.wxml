@@ -11,7 +11,7 @@
           style="background-image: url('https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/head-Y.jpg?sign=80c514c3c56273db8fead838884da317&t=1547706116')"
         ></button>
         <view class='view-msg-Y'>
-          <text class="log-item-name">{{message.name}}. {{message.time}}</text>
+          <text class="log-item-name">{{message.name}}. {{message.timeString}}</text>
           <text class="log-item-msg-Y">{{message.message}}</text>
         </view>
         <view style='width: 50rpx'></view>
@@ -19,8 +19,8 @@
 
       <view class="block-S" wx:if="{{message.name == '梦寒'}}">
         <view style='width: 50rpx'></view>
-        <view class='view-msg-S'>
-          <text class="log-item-name">{{message.time}}. {{message.name}}</text>
+        <view class='view-msg-S'> 
+          <text class="log-item-name">{{message.timeString}}. {{message.name}}</text>
           <text class="log-item-msg-S" wx:if="{{message.message.length <= 27}}">{{message.message}}</text>
           <text class="log-item-msg-SL" wx:if="{{message.message.length > 27}}">{{message.message}}</text>
         </view>
@@ -31,5 +31,14 @@
         ></button>
       </view>
     </block>
+    <view class="page__ft">
+        <image src="https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/Icon/icon_footer.png?sign=bbbe5ef87b1727c36c86e7dedffeb384&t=1547717215" style="width: 84px; height: 19px;"></image>
+    </view>
   </view>
 </view>
+
+<navigator url="../doSearch/doSearch" >
+  <view class="doSearch">
+    <button >查找聊天记录</button>
+  </view>
+</navigator>

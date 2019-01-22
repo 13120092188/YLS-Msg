@@ -44,25 +44,12 @@ Page({
   onLoad: function (options) {
     var that = this
     setTimeout(function () {
-      that.setData({   
+      that.setData({
         nameCode:app.globalData.nameCode
       })
       that.getSweetWords()
     }, 2000)
 
-    const db = wx.cloud.database()
-    db.collection('globalDatas').doc('XD3oO3ffS3SWu3S3').get({
-      success(res) {
-        // res.data 包含该记录的数据
-        app.globalData.numberOfSweetWords = res.data.count
-      }
-    })
-    db.collection('globalDatas').doc('XD3oZ8DR1TiNkdp5').get({
-      success(res) {
-        // res.data 包含该记录的数据
-        app.globalData.numberOfImage = res.data.count
-      }
-    })
   },
 
   /**
@@ -118,19 +105,44 @@ Page({
   getSweetWords: function () {
     var random = Math.floor(Math.random() * app.globalData.numberOfSweetWords)
     console.log(random)
+    // var that = this
+    // const db = wx.cloud.database()
+    // db.collection('sweetWordss').where({
+    //   num: 14
+    // }).get({
+    //     success(res) {
+    //       // res.data 是包含以上定义的两条记录的数组
+    //       console.log(res.data)
+    //       that.setData({
+    //         sweetWords:res.data[0].words
+    //       })
+    //     }
+    //   })
+
+    //调用云函数读取message数据
     var that = this
-    const db = wx.cloud.database()
-    db.collection('sweetWordss').where({
-      num: random
+    wx.cloud.callFunction({
+      name: 'readMsg',
+      data: {
+        i: 0,
+        collectionName: "sweetWordss",
+        order: 'asc'
+      },
+      success: res => {
+        that.setData({
+          sweetWords: res.result.data[random].words
+        })
+        console.log(res.result.data[0].words)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '调用失败',
+        })
+        console.error('[云函数] [readMsg] 调用失败：', err)
+      }
     })
-      .get({
-        success(res) {
-          // res.data 是包含以上定义的两条记录的数组
-          console.log(res.data)
-          that.setData({
-            sweetWords:res.data[0].words
-          })
-        }
-      })
   }
+
+  
 })

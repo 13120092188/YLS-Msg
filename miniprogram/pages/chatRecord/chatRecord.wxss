@@ -30,10 +30,6 @@
   margin-top: 10rpx;
   height:fit-content;
   width: 100%;
-  /* background: #fff; */
-  /* border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none; */
   display: flex;
   flex-direction: row;
   align-items:flex-start;
@@ -44,10 +40,6 @@
   margin-top: 10rpx;
   height:fit-content;
   width: 100%;
-  /* background: #fff; */
-  /* border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none; */
   display: flex;
   flex-direction: row;
   align-items:flex-end;
@@ -87,9 +79,22 @@
   flex-direction: column;
 }
 
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
+.doSearch {
+  position:fixed; bottom:0;
+  display: flex;
+  flex-direction:row;
+  border:1px solid #aaaaaa;
+  border-radius: 5px;
+  width: 100%;
+  background-color : rgba(197, 189, 189, 0.9) ;
+  
+}
+.doSearch button {
+ border : 1px solid #8edabf85 ;
+ width : 50% ;
+ height : 40px ;
+ background-size: 100% 110%;
+ background-color : rgba(102, 88, 88, 0.5) ;
+ line-height : 40px ;
+ font-size : 14px ;
 }
