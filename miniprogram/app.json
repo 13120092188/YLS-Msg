@@ -13,7 +13,8 @@
     "pages/test/test",
     "pages/photoAlbum/photoAlbum",
     "pages/memoryForYou/memoryForYou",
-    "pages/doSearch/doSearch"
+    "pages/doSearch/doSearch",
+    "pages/chatRecordByTime/chatRecordByTime"
   ],
   "window": {
     "backgroundColor": "#214277",

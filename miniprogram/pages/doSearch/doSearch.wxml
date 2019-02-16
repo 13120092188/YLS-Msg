@@ -46,7 +46,7 @@
         <view class="page__bd" style='background-color: rgba(253, 253, 253, 0)'>
         <view class="weui-btn-area" style='background-color: rgba(253, 253, 253, 0)'>
             <picker class="weui-btn" mode="date" value="{{date}}" start="2018-08-10" end="2068-08-10" bindchange="bindDateChange" style='background-color: rgba(253, 253, 253, 0)'>
-                <button type="default" style='background-color: rgba(253, 253, 253, 0.5)'>日期选择器</button>
+                <button type="default" style='background-color: rgba(253, 253, 253, 0.5)'>按日期查找</button>
             </picker>
         </view>
     </view>

@@ -142,18 +142,20 @@ Page({
       //更新云数据库中变量的值
       app.globalData.numberOfSweetWords = app.globalData.numberOfSweetWords + 1
       console.log(app.globalData.numberOfSweetWords)
-      db.collection('globalDatas').doc('XD3oO3ffS3SWu3S3').update({
+      wx.cloud.callFunction({
+        name: 'updateGlobal',
         data: {
-          count: app.globalData.numberOfSweetWords
+          number: app.globalData.numberOfSweetWords,
+          itemId: 'XD3oO3ffS3SWu3S3'
         },
         success: res => {
-          this.setData({
-            // count: newCount
-          })
         },
         fail: err => {
-          icon: 'none',
-            console.error('[数据库] [更新记录] 失败：', err)
+          wx.showToast({
+            icon: 'none',
+            title: '调用失败',
+          })
+          console.error('[云函数] [readMsg] 调用失败：', err)
         }
       })
     }

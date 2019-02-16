@@ -79,6 +79,7 @@ App({
     nameCode:0,
     myOpenId:'',
     numberOfSweetWords:0,
-    numberOfImage:0
+    numberOfImage:0,
+    timeStringDate:''
   }
 })

@@ -1,5 +1,4 @@
-<!--miniprogram/pages/chatRecord/chatRecord.wxml-->
-
+<!--miniprogram/pages/chatRecordByTime/chatRecordByTime.wxml-->
 <image class='background'></image>
 <view>
   <view class="container log-list">
@@ -37,8 +36,4 @@
   </view>
 </view>
 
-<navigator url="../doSearch/doSearch" >
-  <view class="doSearch">
-    <button >查找聊天记录</button>
-  </view>
-</navigator>
+

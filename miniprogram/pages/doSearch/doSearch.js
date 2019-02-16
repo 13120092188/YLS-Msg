@@ -1,4 +1,6 @@
 // miniprogram/pages/doSearch/doSearch.js
+const app = getApp();
+
 Page({
 
   /**
@@ -94,9 +96,9 @@ Page({
     this.setData({
       date: e.detail.value
     })
-
+    app.globalData.timeStringDate = this.data.date
     wx.navigateTo({
-      url: '../chatRecord/chatRecord',
+      url: '../chatRecordByTime/chatRecordByTime',
     })
   }
 })

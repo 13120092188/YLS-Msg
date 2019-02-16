@@ -158,20 +158,23 @@ Page({
             //更新云数据库中变量的值
             app.globalData.numberOfImage = app.globalData.numberOfImage + 1
             console.log(app.globalData.numberOfImage)/////////////////////
-            db.collection('globalDatas').doc('XD3oZ8DR1TiNkdp5').update({
+            wx.cloud.callFunction({
+              name: 'updateGlobal',
               data: {
-                count: app.globalData.numberOfImage
+                number: app.globalData.numberOfImage,
+                itemId: 'XD3oZ8DR1TiNkdp5'
               },
               success: res => {
-                this.setData({
-                  // count: newCount
-                })
               },
               fail: err => {
-                icon: 'none',
-                  console.error('[数据库] [更新记录] 失败：', err)
+                wx.showToast({
+                  icon: 'none',
+                  title: '调用失败',
+                })
+                console.error('[云函数] [readMsg] 调用失败：', err)
               }
             })
+          
 
             // wx.navigateTo({
             //   url: '../storageConsole/storageConsole'
