@@ -1,2 +1,5 @@
 <!--miniprogram/pages/memoryForYou/memoryForYou.wxml-->
 <text>替你记一些你容易忘记的事情</text>
+<view class="section tc" style="width: 100%">
+  <video style="width: 100%" id="myVideo" src="https://6964-id-weather-1259799196.tcb.qcloud.la/SVID_20190812_200145_1.mp4?sign=5fd99d11dc25d84fbf33a9c359ba09c8&t=1565620764" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+</view>
