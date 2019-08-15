@@ -30,9 +30,14 @@ Page({
         name: '小可爱的脑子',
         icon_url: 'https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/Icon/icon_memory.png?sign=2cf29f548aac2858e42e949d65b14c6b&t=1547800789'
       },
+      // {
+      //   id: 'index1',
+      //   name: '尚待开发',
+      //   icon_url: 'https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/Icon/icon_naughty.png?sign=e010f2bba6a9b7671302123feb171caf&t=1547800943'
+      // }
       {
-        id: 'index1',
-        name: '尚待开发',
+        id: 'easyToCopy',
+        name: '懒死你吧',
         icon_url: 'https://796c-yls1-cc55f1-1258517682.tcb.qcloud.la/Images/Icon/icon_naughty.png?sign=e010f2bba6a9b7671302123feb171caf&t=1547800943'
       }
     ]

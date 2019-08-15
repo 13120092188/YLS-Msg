@@ -14,7 +14,8 @@
     "pages/photoAlbum/photoAlbum",
     "pages/memoryForYou/memoryForYou",
     "pages/doSearch/doSearch",
-    "pages/chatRecordByTime/chatRecordByTime"
+    "pages/chatRecordByTime/chatRecordByTime",
+    "pages/easyToCopy/easyToCopy"
   ],
   "window": {
     "backgroundColor": "#214277",
