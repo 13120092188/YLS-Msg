@@ -11,6 +11,8 @@
 	"appid": "wx7af551200e118792",
 	"projectname": "YLS-Msg",
 	"libVersion": "2.5.0",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

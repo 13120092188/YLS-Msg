@@ -24,5 +24,6 @@
     "navigationBarTitleText": "你的眼睛里",
     "navigationBarTextStyle": "black"
   },
-  "cloud": true
+  "cloud": true,
+  "sitemapLocation": "sitemap.json"
 }
